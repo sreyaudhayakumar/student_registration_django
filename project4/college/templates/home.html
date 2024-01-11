@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style type="text/css">
+        *{
+        text-decoration:none;
+        }
+        .navbar{
+        background:crimson;
+        font-family:calibri;
+        padding-right:15px;
+        padding-left:15px;
+
+        }
+        .navdiv{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        }
+        li{
+        list-style:none;
+        display:inline-block;
+        }
+        li a{
+        color:white;
+        font-size:18px;
+        font-weight:bold;
+        margin-right:25px;
+
+       }
+
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="navdiv">
+        <h1>Welcome to SV College </h1>
+            <ul>
+                <li><a href="{% url 'home_page' %}">Home</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+    </div>
+</nav>
+</body>
+</html>

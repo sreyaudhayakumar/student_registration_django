@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="radio"],
+        input[type="checkbox"],
+        input[type="file"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form method="POST" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        <table class="table">
+            <tr>
+                <th><label>Username</label></th>
+                <td><input type="text" class="form-control" name="username"></td>
+            </tr>
+            <tr>
+                <th><label>Password</label></th>
+                <td><input type="text" class="form-control" name="password"></td>
+            </tr>
+            <tr>
+                <th><label>First Name</label></th>
+                <td><input type="text" class="form-control" name="firstname"></td>
+            </tr>
+            <tr>
+                <th><label>Last Name</label></th>
+                <td><input type="text" class="form-control" name="lastname"></td>
+            </tr>
+            <tr>
+                <th><label>Gender</label></th>
+                <td>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" value="male">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" value="female">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" value="other">
+                        <label class="form-check-label">Other</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><label>Age</label></th>
+                <td><input type="number" class="form-control" name="age"></td>
+            </tr>
+            <tr>
+                <th><label>Course</label></th>
+                <td>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="course" value="Bsc IT">
+                        <label class="form-check-label">Bsc IT</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="course" value="Bsc CS">
+                        <label class="form-check-label">Bsc CS</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="course" value="Bsc English">
+                        <label class="form-check-label">Bsc English</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="course" value="Bsc Maths">
+                        <label class="form-check-label">Bsc Maths</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="course" value="Bsc physics">
+                        <label class="form-check-label">Bsc physics</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="course" value="Bsc chemistry">
+                        <label class="form-check-label">Bsc chemistry</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><label>Place</label></th>
+                <td><input type="text" class="form-control" name="place"></td>
+            </tr>
+            <tr>
+                <th><label>Address</label></th>
+                <td><input type="text" class="form-control" name="address"></td>
+            </tr>
+            <tr>
+                <th><label>Email</label></th>
+                <td><input type="text" class="form-control" name="email"></td>
+            </tr>
+            <tr>
+                <th><label>Photo</label></th>
+                <td><input type="file" class="form-control-file" name="image"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit" class="btn btn-primary"></td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
